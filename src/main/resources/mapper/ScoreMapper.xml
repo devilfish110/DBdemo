@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ScoreMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.demo.domain.Score">
+            <id property="studentId" column="student_id" jdbcType="INTEGER"/>
+            <id property="courseId" column="course_id" jdbcType="INTEGER"/>
+            <result property="score" column="score" jdbcType="INTEGER"/>
+            <result property="version" column="version" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        student_id,course_id,score,
+        version
+    </sql>
+</mapper>
